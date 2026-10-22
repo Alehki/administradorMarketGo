@@ -1,0 +1,182 @@
+/* =================================================================
+   ESTILOS MODERNOS: PRODUCTOS GRID & ADMIN (ESTÁTICO Y CON ESPACIOS)
+   ================================================================= */
+
+.productos-header-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.buscador-productos {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.92rem;
+  width: 100%;
+  max-width: 320px;
+  outline: none;
+  background: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.buscador-productos:focus {
+  border-color: #3b82f6;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.producto-card {
+  background: #ffffff;
+  padding: 1.15rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Tarjeta completamente estática (sin hover que mueva o levante) */
+}
+
+/* Mejora extra: Estilo limpio para el título del producto dentro de la card */
+.producto-card h3, 
+.producto-card .producto-nombre {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita a 2 líneas para que no se desborde */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.flash-verde {
+  background: #ecfdf5 !important;
+  border-color: #10b981 !important;
+  transition: background 0.3s ease;
+}
+
+.producto-img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 6px;
+}
+
+.producto-cat {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Contenedor de inputs con separación clara y segura entre ellos */
+.producto-inputs {
+  display: flex;
+  gap: 16px; /* Espacio horizontal bien definido y separado */
+  margin-top: 4px;
+  width: 100%;
+}
+
+/* Aseguramos que cada campo hijo tenga su espacio y distribución propia */
+.producto-inputs > div,
+.producto-inputs .input-group,
+.producto-inputs p {
+  flex: 1;
+  min-width: 0; /* Evita que los inputs rompan el grid si el texto es largo */
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Espacio vertical limpio entre el label y su input */
+  margin: 0;
+}
+
+.producto-inputs label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.producto-inputs input {
+  width: 100% !important;
+  padding: 8px 10px;
+  font-size: 0.88rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+  outline: none;
+  box-sizing: border-box; /* Evita que el padding deforme el ancho */
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.producto-inputs input:focus {
+  border-color: #3b82f6;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.producto-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px dashed #f1f5f9;
+}
+
+/* Mejora extra: Alineación y prolijidad para el estado/checkbox del footer */
+.producto-card-footer label,
+.producto-card-footer .checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+}
+
+.producto-card-footer input[type="checkbox"] {
+  accent-color: #2563eb; /* Le da color moderno al checkbox */
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.btn-guardar-azul {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-guardar-azul:hover {
+  background: #1d4ed8;
+}
+
+.btn-guardar-azul:active {
+  transform: scale(0.96);
+}
